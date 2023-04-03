@@ -2,14 +2,12 @@
     import { fade } from 'svelte/transition';
 </script>
 
-<p in:fade="{{ duration: 400 }}" class="headings">
+<span in:fade="{{ duration: 400 }}" class="content-body">
     <slot />
-</p>
+</span>
 
 <style>
-    p {
-        display: inline;
+    .content-body {
         color: inherit;
-        /* background-color: rgba(255,255,0,0); */
     }
 </style>

@@ -1,0 +1,36 @@
+<script>
+    import { level, max_level } from "../../stores.js";
+    import Layer from "../../Layer.svelte";
+    import Content from "../../Content.svelte";
+    import "@picocss/pico";
+    import "../../app.css";
+
+    max_level.set(1);
+</script>
+
+# I Squirrel, But Why
+
+$f(x) = x^2$
+
+<p>Level: {$level}</p>
+
+<Layer>
+    <Content slot="body">
+        Layer 0
+        <Layer>
+            <Content slot="body">
+
+                Layer 1 $x^2$
+
+                # Hello
+
+            </Content>
+            <Content slot="summary">
+
+                Sub 1
+
+            </Content>
+        </Layer>
+    </Content>
+    <Content slot="summary">Sub 0</Content>
+</Layer>
